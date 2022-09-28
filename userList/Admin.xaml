@@ -1,0 +1,27 @@
+﻿<Window x:Class="userList.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:userList"
+        mc:Ignorable="d"
+        Title="Admin" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="listUser">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Имя</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MiddleName}">Фамилия</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}">Отчество</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DataTime}">Дата</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Salary}">Зарплата</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Login}">Логин</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Password}" Width="100">Пароль</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Role}" Width="100">Роль</GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
